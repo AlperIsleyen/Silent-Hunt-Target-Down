@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: MiazGames
   productName: Silent Hunt Target Down
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -766,8 +766,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Silent Hunt Target Down
-  metroPackageVersion: 
+  metroPackageName: SilentHuntTargetDown
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -775,7 +775,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Silent Hunt Target Down
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Silent Hunt Target Down
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
