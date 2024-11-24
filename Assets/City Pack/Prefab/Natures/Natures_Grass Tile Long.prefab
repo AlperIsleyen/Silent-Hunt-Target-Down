@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 6190033627359085114}
   - component: {fileID: 2203456683100946344}
   - component: {fileID: -1239971816782366751}
-  m_Layer: 0
+  - component: {fileID: -1529805380438197733}
+  m_Layer: 6
   m_Name: Natures_Grass Tile Long
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7554932151806840266
 Transform:
@@ -107,6 +108,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: fbb8756519c039b4f804c77c5e3293f9, type: 3}
+--- !u!208 &-1529805380438197733
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2264217033381301339}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 10, y: 0.00001, z: 10}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6800146659126064109
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,12 +136,12 @@ GameObject:
   - component: {fileID: 1529575428985038382}
   - component: {fileID: 7022860508055450025}
   - component: {fileID: 6956138242750522706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Natures_Grass Tile 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4044126498805220933
 Transform:

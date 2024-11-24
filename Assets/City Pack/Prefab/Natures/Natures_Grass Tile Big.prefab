@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 5148084673207757882}
   - component: {fileID: 3747658812284555674}
   - component: {fileID: -8431991965430552509}
-  m_Layer: 0
+  - component: {fileID: -4537949816064613939}
+  m_Layer: 6
   m_Name: Natures_Grass Tile Big
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3423548018903900805
 Transform:
@@ -108,6 +109,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: fbb8756519c039b4f804c77c5e3293f9, type: 3}
+--- !u!208 &-4537949816064613939
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7425966311266141107}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 10, y: 0.00001, z: 10}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &8470292052599287302
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,12 +137,12 @@ GameObject:
   - component: {fileID: 383272393094768647}
   - component: {fileID: 1336180316175789734}
   - component: {fileID: 3940583457538535795}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Natures_Grass Tile 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6944836896063319650
 Transform:
@@ -226,12 +243,12 @@ GameObject:
   - component: {fileID: 7758042504556144440}
   - component: {fileID: 2166150587431635548}
   - component: {fileID: 1254730962350792925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Natures_Grass Tile 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3593728676115228224
 Transform:
@@ -332,12 +349,12 @@ GameObject:
   - component: {fileID: 4044861724166758561}
   - component: {fileID: 8557849519262601760}
   - component: {fileID: 3587936926971118464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Natures_Grass Tile 1 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8248287870393630373
 Transform:

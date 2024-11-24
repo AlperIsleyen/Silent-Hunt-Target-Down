@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 2408758886694787754}
   - component: {fileID: 2384209350658964171}
   - component: {fileID: 5469724891522118667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Road Lane_01 1 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &124955275075568069
 Transform:
@@ -119,12 +119,12 @@ GameObject:
   - component: {fileID: 5249410281775935240}
   - component: {fileID: 1717141428236182567}
   - component: {fileID: -7502864194538501271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Road Lane_Long
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &149777103610675864
 Transform:
@@ -229,12 +229,12 @@ GameObject:
   - component: {fileID: 1222455667507730956}
   - component: {fileID: 1138841668000758321}
   - component: {fileID: 7217248354611427743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Road Lane_01 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2265020049167130144
 Transform:
@@ -335,12 +335,12 @@ GameObject:
   - component: {fileID: 8338808343799159954}
   - component: {fileID: 2364271107716980473}
   - component: {fileID: 5989218544685834978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Road Lane_01 1 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7991083589126887778
 Transform:
@@ -441,12 +441,12 @@ GameObject:
   - component: {fileID: 7416969024521262031}
   - component: {fileID: 4460113824376703922}
   - component: {fileID: 53572778067249046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Road Lane_01 1 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7454951551106937560
 Transform:
@@ -547,12 +547,12 @@ GameObject:
   - component: {fileID: 1666259133620802206}
   - component: {fileID: 6179143906966408416}
   - component: {fileID: 8029273387931928346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Road Lane_01 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &714378090913951618
 Transform:

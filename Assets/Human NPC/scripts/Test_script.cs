@@ -177,7 +177,7 @@ public class Test_script : MonoBehaviour
      
         if(!destermine_new_aim)
         {
-            int what_to_choose = UnityEngine.Random.Range(0, 5);
+            int what_to_choose = UnityEngine.Random.Range(0, 2);
 
            
 
@@ -205,7 +205,7 @@ public class Test_script : MonoBehaviour
                 aim_point = way_points[Which_point].gameObject;
                 destermine_new_aim = true;
             }
-            if (what_to_choose == 2)
+            /*if (what_to_choose == 2)
             {
                 sit = true;
 
@@ -228,7 +228,7 @@ public class Test_script : MonoBehaviour
                 int Which_point = UnityEngine.Random.Range(0, pick_up_points.Count );
                 aim_point = pick_up_points[Which_point].gameObject;
                 destermine_new_aim = true;
-            }
+            }*/
 
         }
         if (destermine_new_aim)
@@ -261,7 +261,7 @@ public class Test_script : MonoBehaviour
 
                 if (Vector3.Distance(transform.position, aim_point.transform.position) > 0.25f)
                 {
-                    Debug.Log("going to run");
+                    //Debug.Log("going to run");
                     agent.speed = run_speed;
                     agent.SetDestination(aim_point.transform.position);
                     ani.SetInteger("arms", 2);
