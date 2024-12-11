@@ -1,10 +1,30 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using UnityEngine;
 
 public class clothing : MonoBehaviour
 {
 
+
+    public int suit; //
+    public bool bool_suit = false; //
+    public bool bool_cloth = false;
+    public int skin; //
+    public int sex;
+    public int hair_color; //
+    public bool bool_shoe;
+    public int int_shoe;
+    public bool upper;
+    public int int_upper;
+    public bool bool_trouser; //
+    public int int_trouser; //
+    public bool short_trouser; //
+    public int int_short_trouser; //
+    public bool glass;
+    public bool scraf;
+    public bool chani;
 
     public GameObject skin_head;
     public GameObject skin_body;
@@ -150,18 +170,9 @@ public class clothing : MonoBehaviour
 
     public bool show_run;
    
-
-   
-
     bool hat;
 
-
-
-
-
-
-
-   
+ 
 
 
 
@@ -169,7 +180,7 @@ public class clothing : MonoBehaviour
 
     IEnumerator start_random_clothing()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0f);
 
         // disapear all cloth, for a new run
 
@@ -248,19 +259,10 @@ public class clothing : MonoBehaviour
 
         trousers.SetActive(false);
 
-
-
-
-
-
-
-
-      
-
         // determining skin color
 
         int skin_color = UnityEngine.Random.Range(0, 6);
-
+        skin = skin_color;
         skin_head.GetComponent<Renderer>().materials[0].mainTexture = skin_textures[skin_color];
         skin_body.GetComponent<Renderer>().materials[0].mainTexture = skin_textures[skin_color];
 
@@ -268,16 +270,12 @@ public class clothing : MonoBehaviour
 
         // determining male or female
         int male_female = UnityEngine.Random.Range(0, 2);
-
-   
-        
-       
+        sex = male_female;
         // does a hat fit for the hair
-        
 
         // determining haircolor
         int hairColor = UnityEngine.Random.Range(0, 4);    // 0 = dark  1 = brown  2 = blonde
-        
+        hair_color = hairColor;
         // male
         if(male_female == 0)
         {
@@ -414,11 +412,7 @@ public class clothing : MonoBehaviour
                    
                         hair_e.GetComponent<Renderer>().materials[0].mainTexture = hair_e_textures[2];
                     
-                   
-
                 }
-
-
             }
 
         }
@@ -559,7 +553,14 @@ public class clothing : MonoBehaviour
 
         // determining complet suits or normal cloth
         int suit_or_cloth = UnityEngine.Random.Range(0, 2);
-
+        if(suit_or_cloth == 0)
+        {
+            bool_suit = true;
+        }
+        else if (suit_or_cloth == 1)
+        {
+            bool_cloth = true;
+        }
         // determing      suit/ normal cloth to wear
 
 
@@ -569,7 +570,7 @@ public class clothing : MonoBehaviour
 
             int which_suit = UnityEngine.Random.Range(0,11);
 
-
+            suit = which_suit;
 
 
             // bankersuit    0
@@ -747,9 +748,9 @@ public class clothing : MonoBehaviour
             if(shoes == 0)
             {
                 shoes1.SetActive(true);
-
+                shoe = true;
                 int shoes1_texture = UnityEngine.Random.Range(0, 8);
-
+                int_shoe = shoes1_texture;
                 shoes1.GetComponent<Renderer>().materials[0].mainTexture = shoes1_textures[shoes1_texture];
 
             }
@@ -757,9 +758,9 @@ public class clothing : MonoBehaviour
             if (shoes == 1)
             {
                 shoes2.SetActive(true);
-
+                shoe = true;
                 int shoes2_texture = UnityEngine.Random.Range(0, 7);
-
+                int_shoe = shoes2_texture;
                 shoes2.GetComponent<Renderer>().materials[0].mainTexture = shoes2_textures[shoes2_texture];
 
             }
@@ -767,9 +768,9 @@ public class clothing : MonoBehaviour
             if (shoes == 2)
             {
                 shoes3.SetActive(true);
-
+                shoe = true;
                 int shoes3_texture = UnityEngine.Random.Range(0, 6);
-
+                int_shoe = shoes3_texture;
                 shoes3.GetComponent<Renderer>().materials[0].mainTexture = shoes3_textures[shoes3_texture];
 
             }
@@ -780,7 +781,7 @@ public class clothing : MonoBehaviour
             if(glasses_percentage < 20)
             {
                 glasses.SetActive(true);
-
+                glass = true;
                 int texture_choose = UnityEngine.Random.Range(0, 6);
 
                 glasses.GetComponent<Renderer>().materials[0].mainTexture = glasses_texture[texture_choose];
@@ -791,7 +792,7 @@ public class clothing : MonoBehaviour
             if(chain == 0)
             {
                 chain1.SetActive(true);
-
+                chani = true;
                 int textures = UnityEngine.Random.Range(0, 4);
 
                 chain1.GetComponent<Renderer>().materials[0].mainTexture = chain1_textures[textures];
@@ -800,7 +801,7 @@ public class clothing : MonoBehaviour
             if(chain == 1)
             {
                 chain2.SetActive(true);
-
+                chani = true;
                 int textures = UnityEngine.Random.Range(0, 3);
 
                 chain2.GetComponent<Renderer>().materials[0].mainTexture = chain2_textures[textures];
@@ -809,7 +810,7 @@ public class clothing : MonoBehaviour
             if(chain == 2)
             {
                 chain3.SetActive(true);
-
+                chani = true;
                 int textures = UnityEngine.Random.Range(0, 3);
 
                 chain3.GetComponent<Renderer>().materials[0].mainTexture = chain3_textures[textures];
@@ -821,7 +822,7 @@ public class clothing : MonoBehaviour
             if(scarfPercentage < 20)
             {
                 scarf.SetActive(true);
-
+                scraf = true;
                 int textures = UnityEngine.Random.Range(0, 11);
 
                 scarf.GetComponent<Renderer>().materials[0].mainTexture = scarf_textures[textures];
@@ -833,9 +834,9 @@ public class clothing : MonoBehaviour
             if(which_trouser == 0)
             {
                 trousers.SetActive(true);
-
+                trouser = true;
                 int texture = UnityEngine.Random.Range(0, 15);
-
+                int_trouser = texture;
                 trousers.GetComponent<Renderer>().materials[0].mainTexture = trousers_textures[texture];
                 
             }
@@ -843,10 +844,10 @@ public class clothing : MonoBehaviour
             if (which_trouser == 1)
             {
                 shortpants.SetActive(true);
-
+                short_trouser = true;
 
                 int texture = UnityEngine.Random.Range(0, 11);
-
+                int_short_trouser = texture;
                 shortpants.GetComponent<Renderer>().materials[0].mainTexture = shortpants_textures[texture];
 
 
@@ -860,51 +861,47 @@ public class clothing : MonoBehaviour
             if(upper_cloth == 0)
             {
                 pullover.SetActive(true);
-
+                upper = true;
                 int texture = UnityEngine.Random.Range(0, 17);
-
+                int_upper = texture;
                 pullover.GetComponent<Renderer>().materials[0].mainTexture = pullover_textures[texture];
             }
 
             if (upper_cloth == 1)
             {
                 shirt.SetActive(true);
-
+                upper = true;
                 int texture = UnityEngine.Random.Range(0, 14);
-
+                int_upper = texture;
                 shirt.GetComponent<Renderer>().materials[0].mainTexture = shirt_textures[texture];
             }
             if (upper_cloth == 2)
             {
                 t_shirt.SetActive(true);
-
+                upper = true;
                 int texture = UnityEngine.Random.Range(0, 21);
-
+                int_upper = texture;
                 t_shirt.GetComponent<Renderer>().materials[0].mainTexture = t_shirt_textures[texture];
             }
             if (upper_cloth == 3)
             {
                 tank_top.SetActive(true);
-
+                upper = true;
                 int texture = UnityEngine.Random.Range(0, 11);
-
+                int_upper = texture;
                 tank_top.GetComponent<Renderer>().materials[0].mainTexture = tank_top_textures[texture];
             }
 
-
-
         }
 
-
-
-
-        yield return new WaitForSeconds(5);
+        /*yield return new WaitForSeconds(5);
 
         StopCoroutine(coroutine_random_clothing);
-        coroutine_random_clothing = StartCoroutine(start_random_clothing());
+        coroutine_random_clothing = StartCoroutine(start_random_clothing());*/
+       
+
         
     }
-
 
     void Update()
     {
@@ -914,13 +911,6 @@ public class clothing : MonoBehaviour
 
             coroutine_random_clothing = StartCoroutine(start_random_clothing());
 
-          
         }
-        
-
-
-
-
-
     }
 }
