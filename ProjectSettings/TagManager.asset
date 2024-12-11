@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - waypoint
+  - pickuppoint
+  - Target
+  - sittingpoint
+  - stealingpoint
+  - TargetText
+  - Innocent
   layers:
   - Default
   - TransparentFX
