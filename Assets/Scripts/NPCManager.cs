@@ -39,6 +39,7 @@ void SpawnNPCs(List<Transform> spawnPoints)
         int Index = Random.Range(0, spawnPoints.Count);
         Transform spawnPoint = spawnPoints[Index];
         GameObject npc = Instantiate(npcPrefab, spawnPoint.position, spawnPoint.rotation);
+        npc.tag = "Innocent";
 
         if (i == guilty)
         {

@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5783979506642164443}
-  - component: {fileID: 2888335005058266406}
+  - component: {fileID: 7307011627983064800}
   m_Layer: 0
   m_Name: Pistol_D
   m_TagString: Untagged
@@ -486,7 +486,7 @@ Transform:
   - {fileID: 3154054355894749591}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2888335005058266406
+--- !u!114 &7307011627983064800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6561465501170253921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80230c341dde49e4ab9adf399b98ee4a, type: 3}
+  m_Script: {fileID: 11500000, guid: c741dc63866924440b39791fcedbd26c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 961282541884419617, guid: f73289aeb65b63d46aa206f6264af886, type: 3}
@@ -503,6 +503,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 7535740628662959531}
   shellSpawn: {fileID: 3154054355894749591}
   bulletVelocity: 30
+  shellVelocity: 1
   lifeTime: 3
 --- !u!1 &7288855047008317139
 GameObject:
