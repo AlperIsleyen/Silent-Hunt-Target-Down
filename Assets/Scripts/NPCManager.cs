@@ -97,7 +97,7 @@ public class NPCManager : MonoBehaviour
                 else if (suit == 4) { Suit = "Mechanicsuit"; }
                 else if (suit == 5) { Suit = "Nursesuit"; }
                 else if (suit == 6) { Suit = "Policesuit"; }
-                else if (suit == 7) { Suit = "Roobersuit"; }
+                else if (suit == 7) { Suit = "Robbersuit"; }
                 else if (suit == 8) { Suit = "Securitysuit"; }
                 else if (suit == 9) { Suit = "Sellersuit"; }
                 else if (suit == 10) { Suit = "Workersuit"; }
