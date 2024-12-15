@@ -5,13 +5,17 @@ using TMPro;
 public class NPCManager : MonoBehaviour
 {
     public GameObject npcPrefab;
-    public int numberOfNPCs = 20;
+    public int numberOfNPCs;
     public int guilty = 0;
     public TextMeshPro text;
     GameObject target;
-   
+
+    private GameManager gameManager;
+
     private void Awake()
     {
+        gameManager = GameManager.Instance;
+        numberOfNPCs = gameManager.numberOfNpc;
         GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("waypoint");
 
         List<Transform> spawnPoints = new List<Transform>();

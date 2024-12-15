@@ -9,16 +9,28 @@ public class Weapon : MonoBehaviour
     public GameObject shellPrefab;
     public Transform bulletSpawn;
     public Transform shellSpawn;
+    public int bulletCount;
     public float bulletVelocity = 30f;
     public float shellVelocity = 1f;
     public float lifeTime = 3f;
- 
- 
+
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+        bulletCount = gameManager.bullet;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0)) 
         {
-            FireWeapon();
+            if (bulletCount > 0)
+            {
+                bulletCount -= 1;
+                FireWeapon();
+            }
+
         }
     }
  
