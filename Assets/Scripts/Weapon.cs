@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using TMPro;
 public class Weapon : MonoBehaviour
 {
     public GameObject bulletPrefab;
@@ -13,13 +13,14 @@ public class Weapon : MonoBehaviour
     public float bulletVelocity = 30f;
     public float shellVelocity = 1f;
     public float lifeTime = 3f;
-
+    public TMP_Text count;
     private GameManager gameManager;
 
     private void Start()
     {
         gameManager = GameManager.Instance;
         bulletCount = gameManager.bullet;
+        count.text = string.Format("{0}/0", bulletCount);
     }
     void Update()
     {
@@ -28,6 +29,7 @@ public class Weapon : MonoBehaviour
             if (bulletCount > 0)
             {
                 bulletCount -= 1;
+                count.text = string.Format("{0}/0", bulletCount);
                 FireWeapon();
             }
 

@@ -28,13 +28,11 @@ public class GameManager : MonoBehaviour
     public void SetDifficulty(int int_difficulty)
     {
         difficulty = int_difficulty;
-        Debug.Log("Difficulty set to: " + difficulty);
     }
 
     public void SetNumberOfNpc(int int_npcCount)
     {
         numberOfNpc = int_npcCount;
-        Debug.Log("Number of NPCs set to: " + numberOfNpc);
     }
     public void SetBullet(int int_bullet)
     {
