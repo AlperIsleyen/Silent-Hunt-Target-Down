@@ -6,6 +6,7 @@ public class NPCManager : MonoBehaviour
 {
     public GameObject npcPrefab;
     public int numberOfNPCs;
+    public int difficulty;
     public int guilty = 0;
     public TextMeshPro text;
     GameObject target;
@@ -16,8 +17,9 @@ public class NPCManager : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         numberOfNPCs = gameManager.numberOfNpc;
+        difficulty = gameManager.difficulty;
         GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("waypoint");
-
+        Debug.Log(difficulty);
         List<Transform> spawnPoints = new List<Transform>();
         foreach (GameObject spawnPointObject in spawnPointObjects)
         {
