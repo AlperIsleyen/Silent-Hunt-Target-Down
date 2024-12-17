@@ -1,10 +1,4 @@
-﻿// CHANGE LOG
-// 
-// CHANGES || version VERSION
-//
-// "Enable/Disable Headbob, Changed look rotations - should result in reduced camera jitters" || version 1.0.1
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +11,13 @@ using UnityEngine.UI;
 public class FirstPersonController : MonoBehaviour
 {
     private Rigidbody rb;
-
+    public AudioSource moveSource;
+    public AudioSource jumpSource;
+    public AudioClip[] move;
+    public AudioClip jump;
+    int Index;
+    float Interval = 0.5f;
+    float nextTime = 0f;
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -377,6 +377,14 @@ public class FirstPersonController : MonoBehaviour
             // Will allow head bob
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
+                if (Time.time >= nextTime)
+                {
+                    moveSource.clip = move[Index];
+                    moveSource.Play(); 
+
+                    Index = (Index + 1) % move.Length;
+                    nextTime = Time.time + Interval;
+                }
                 isWalking = true;
             }
             else
@@ -465,6 +473,8 @@ public class FirstPersonController : MonoBehaviour
         if (isGrounded)
         {
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
+            jumpSource.clip = jump;
+            jumpSource.Play();
             isGrounded = false;
         }
 
@@ -529,7 +539,7 @@ public class FirstPersonController : MonoBehaviour
 }
 
 
-
+/*
 // Custom Editor
 #if UNITY_EDITOR
     [CustomEditor(typeof(FirstPersonController)), InitializeOnLoadAttribute]
@@ -740,3 +750,4 @@ public class FirstPersonController : MonoBehaviour
 }
 
 #endif
+*/

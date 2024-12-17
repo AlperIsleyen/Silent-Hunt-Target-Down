@@ -15,12 +15,14 @@ public class Weapon : MonoBehaviour
     public float lifeTime = 3f;
     public TMP_Text count;
     private GameManager gameManager;
-
+    public AudioSource gunShot;
+    public AudioClip deagle;
     private void Start()
     {
         gameManager = GameManager.Instance;
         bulletCount = gameManager.bullet;
         count.text = string.Format("{0}/0", bulletCount);
+        gunShot.clip = deagle;
     }
     void Update()
     {
@@ -30,6 +32,7 @@ public class Weapon : MonoBehaviour
             {
                 bulletCount -= 1;
                 count.text = string.Format("{0}/0", bulletCount);
+                gunShot.Play();
                 FireWeapon();
             }
 
@@ -42,7 +45,7 @@ public class Weapon : MonoBehaviour
         bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward.normalized * bulletVelocity, ForceMode.Impulse);
         GameObject bulletShell = Instantiate(shellPrefab, shellSpawn.position, Quaternion.identity);
         bulletShell.GetComponent<Rigidbody>().AddForce(shellSpawn.forward.normalized * shellVelocity, ForceMode.Impulse);
- 
+        
         DestroyBulletAfterTime(bullet, bulletShell, lifeTime);
  
  
