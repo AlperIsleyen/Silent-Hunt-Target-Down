@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public int difficulty;
     public int numberOfNpc;
     public int bullet;
+    public GameObject targetKilledUI;
+    public GameObject innocentKilledUI;
+    public GameObject outOfAmmoUI;
 
     public static GameManager Instance;
 
@@ -38,5 +41,29 @@ public class GameManager : MonoBehaviour
     {
         bullet = int_bullet;
 
+    }
+    public void TargetKilled()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        targetKilledUI = GameObject.FindWithTag("TargetKilledUI");
+        GameObject targetKilledUII = targetKilledUI.transform.GetChild(0).gameObject;
+        targetKilledUII.SetActive(true);
+    }
+    public void InnocentKilled()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        innocentKilledUI = GameObject.FindWithTag("InnocentKilledUI");
+        GameObject innocentKilledUII = innocentKilledUI.transform.GetChild(0).gameObject;
+        innocentKilledUII.SetActive(true);
+    }
+    public void OutOfAmmo()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        outOfAmmoUI = GameObject.FindWithTag("OutOfAmmoUI");
+        GameObject outOfAmmoUII = outOfAmmoUI.transform.GetChild(0).gameObject;
+        outOfAmmoUII.SetActive(true);
     }
 }

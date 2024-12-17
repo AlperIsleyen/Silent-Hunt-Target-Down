@@ -12,6 +12,9 @@ TagManager:
   - stealingpoint
   - TargetText
   - Innocent
+  - TargetKilledUI
+  - InnocentKilledUI
+  - OutOfAmmoUI
   layers:
   - Default
   - TransparentFX

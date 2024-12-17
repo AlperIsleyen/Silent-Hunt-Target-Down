@@ -26,11 +26,12 @@ public class Bullet : MonoBehaviour
             }
             if (collision.gameObject.CompareTag("Target"))
             {
-                Debug.Log("Hit Target!");
+                GameManager.Instance.TargetKilled();
+
             }
             else if (collision.gameObject.CompareTag("Innocent"))
             {
-                Debug.Log("Hit Innocent!");
+                GameManager.Instance.InnocentKilled();
             }
         }
         Destroy(gameObject);

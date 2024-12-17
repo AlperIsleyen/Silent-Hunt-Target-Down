@@ -35,7 +35,10 @@ public class Weapon : MonoBehaviour
                 gunShot.Play();
                 FireWeapon();
             }
-
+            else
+            {
+                GameManager.Instance.OutOfAmmo();
+            }
         }
     }
  

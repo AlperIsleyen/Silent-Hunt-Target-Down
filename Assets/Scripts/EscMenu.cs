@@ -6,6 +6,7 @@ public class EscMenu : MonoBehaviour
     public GameObject menuButton;
     public bool check = false;
     public FirstPersonController cameraa;
+    public Weapon weapon;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -18,6 +19,7 @@ public class EscMenu : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 cameraa.enabled = true;
+                weapon.enabled = true;
                 check = !check;
             }
             else
@@ -28,6 +30,7 @@ public class EscMenu : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 cameraa.enabled = false;
+                weapon.enabled = false;
                 check = !check;
             }
         }
