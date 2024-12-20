@@ -19,7 +19,6 @@ public class NPCManager : MonoBehaviour
         numberOfNPCs = gameManager.numberOfNpc;
         difficulty = gameManager.difficulty;
         GameObject[] spawnPointObjects = GameObject.FindGameObjectsWithTag("waypoint");
-        Debug.Log(difficulty);
         List<Transform> spawnPoints = new List<Transform>();
         foreach (GameObject spawnPointObject in spawnPointObjects)
         {

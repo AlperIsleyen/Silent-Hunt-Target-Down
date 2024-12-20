@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject targetKilledUI;
     public GameObject innocentKilledUI;
     public GameObject outOfAmmoUI;
+    public GameObject outOfTimeUI;
 
     public static GameManager Instance;
 
@@ -66,4 +68,14 @@ public class GameManager : MonoBehaviour
         GameObject outOfAmmoUII = outOfAmmoUI.transform.GetChild(0).gameObject;
         outOfAmmoUII.SetActive(true);
     }
+    public void OutOfTime()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        outOfTimeUI = GameObject.FindWithTag("OutOfTimeUI");
+        GameObject outOfTimeUII = outOfTimeUI.transform.GetChild(0).gameObject;
+        outOfTimeUII.SetActive(true);
+    }
+
+
 }

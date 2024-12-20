@@ -7,6 +7,8 @@ public class EscMenu : MonoBehaviour
     public bool check = false;
     public FirstPersonController cameraa;
     public Weapon weapon;
+    public AudioSource music;
+    public AudioSource ambience;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -18,6 +20,8 @@ public class EscMenu : MonoBehaviour
                 Time.timeScale = 1f;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                music.UnPause();
+                ambience.UnPause();
                 cameraa.enabled = true;
                 weapon.enabled = true;
                 check = !check;
@@ -29,6 +33,8 @@ public class EscMenu : MonoBehaviour
                 Time.timeScale = 0f;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                music.Pause();
+                ambience.Pause();
                 cameraa.enabled = false;
                 weapon.enabled = false;
                 check = !check;

@@ -15,6 +15,7 @@ TagManager:
   - TargetKilledUI
   - InnocentKilledUI
   - OutOfAmmoUI
+  - OutOfTimeUI
   layers:
   - Default
   - TransparentFX

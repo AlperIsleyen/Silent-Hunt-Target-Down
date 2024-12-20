@@ -4,9 +4,10 @@ using UnityEngine;
 using TMPro;
 public class Timer : MonoBehaviour
 {
-    public float timeRemaining = 300;
+    public float timeRemaining = 10;
     public bool timeIsRunning = true;
     public TMP_Text timeText;
+
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class Timer : MonoBehaviour
             else
             {
                 timeIsRunning = false;
+                GameManager.Instance.OutOfTime();
             }
         }
     }
