@@ -8,8 +8,11 @@ public class MapMenu : MonoBehaviour
     public GameObject difficultyMenu;
     public AudioSource source;
 
+    public AudioClip returnSound;
+
     public void OnReturnButton()
     {
+        source.clip = returnSound;
         source.Play();
         difficultyMenu.SetActive(true);
         mainMenu.SetActive(false);

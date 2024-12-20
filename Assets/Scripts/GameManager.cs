@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     }
     public void TargetKilled()
     {
+        GameObject pistol = GameObject.FindWithTag("Pistol");
+        Weapon weapon = pistol.GetComponent<Weapon>();
+        weapon.enabled = false;
         source.clip = win;
         source.Play();
         Cursor.lockState = CursorLockMode.None;
@@ -62,6 +65,9 @@ public class GameManager : MonoBehaviour
     }
     public void InnocentKilled()
     {
+        GameObject pistol = GameObject.FindWithTag("Pistol");
+        Weapon weapon = pistol.GetComponent<Weapon>();
+        weapon.enabled = false;
         source.clip = lose;
         source.Play();
         Cursor.lockState = CursorLockMode.None;
@@ -72,6 +78,9 @@ public class GameManager : MonoBehaviour
     }
     public void OutOfAmmo()
     {
+        GameObject pistol = GameObject.FindWithTag("Pistol");
+        Weapon weapon = pistol.GetComponent<Weapon>();
+        weapon.enabled = false;
         source.clip = ammo;
         source.Play();
         Cursor.lockState = CursorLockMode.None;
@@ -82,6 +91,9 @@ public class GameManager : MonoBehaviour
     }
     public void OutOfTime()
     {
+        GameObject pistol = GameObject.FindWithTag("Pistol");
+        Weapon weapon = pistol.GetComponent<Weapon>();
+        weapon.enabled = false;
         source.clip = time;
         source.Play();
         Cursor.lockState = CursorLockMode.None;

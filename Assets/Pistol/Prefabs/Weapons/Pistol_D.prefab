@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 7307011627983064800}
   m_Layer: 0
   m_Name: Pistol_D
-  m_TagString: Untagged
+  m_TagString: Pistol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,9 +502,13 @@ MonoBehaviour:
   shellPrefab: {fileID: 2147895002730076875, guid: 12ec307e4794d5343818153e0717ee71, type: 3}
   bulletSpawn: {fileID: 7535740628662959531}
   shellSpawn: {fileID: 3154054355894749591}
+  bulletCount: 0
   bulletVelocity: 30
   shellVelocity: 1
   lifeTime: 3
+  count: {fileID: 0}
+  gunShot: {fileID: 0}
+  deagle: {fileID: 0}
 --- !u!1 &7288855047008317139
 GameObject:
   m_ObjectHideFlags: 0
