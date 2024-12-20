@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public AudioSource source;
+
+    public AudioClip win;
+    public AudioClip lose;
+    public AudioClip ammo;
+    public AudioClip time;
     private void Awake()
     {
  
@@ -46,6 +52,8 @@ public class GameManager : MonoBehaviour
     }
     public void TargetKilled()
     {
+        source.clip = win;
+        source.Play();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         targetKilledUI = GameObject.FindWithTag("TargetKilledUI");
@@ -54,6 +62,8 @@ public class GameManager : MonoBehaviour
     }
     public void InnocentKilled()
     {
+        source.clip = lose;
+        source.Play();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         innocentKilledUI = GameObject.FindWithTag("InnocentKilledUI");
@@ -62,6 +72,8 @@ public class GameManager : MonoBehaviour
     }
     public void OutOfAmmo()
     {
+        source.clip = ammo;
+        source.Play();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         outOfAmmoUI = GameObject.FindWithTag("OutOfAmmoUI");
@@ -70,6 +82,8 @@ public class GameManager : MonoBehaviour
     }
     public void OutOfTime()
     {
+        source.clip = time;
+        source.Play();
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         outOfTimeUI = GameObject.FindWithTag("OutOfTimeUI");

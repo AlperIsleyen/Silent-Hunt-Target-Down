@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayButton : MonoBehaviour
 {
     public GameObject difficultyMenu;
+    public AudioSource Play;
 
     public void OnPlayButton()
     {
         difficultyMenu.SetActive(true);
+        Play.Play();
     }
 
 }
-
