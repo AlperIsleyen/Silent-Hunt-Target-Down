@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Brifing.unity
+    guid: 09169dbb0ef6b8d41bf5e9a2e60e6810
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: b81e0da50c60c324e8d2f89ab3f1f589
   - enabled: 1

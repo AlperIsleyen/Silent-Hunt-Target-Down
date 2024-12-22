@@ -226,8 +226,8 @@ public class NPCManager : MonoBehaviour
                 }
             }
 
-            if (skin == 0 || skin == 1) { Skin = "Dark Skinned"; Text += "Skin Color: " + Skin + "\n "; }
-            else if (skin >= 2) { Skin = "Light Skinned"; Text += "Skin Color: " + Skin + "\n "; }
+            if (skin == 0 || skin == 1) { Skin = "Dark Skinned"; Text += "Skin Color: " + Skin + "\n"; }
+            else if (skin >= 2) { Skin = "Light Skinned"; Text += "Skin Color: " + Skin + "\n"; }
 
             if (hair == 0) { Hair = "Dark"; Text += "Hair Color: " + Hair + "\n"; }
             else if (hair == 1) { Hair = "Brown"; Text += "Hair Color: " + Hair + "\n"; }

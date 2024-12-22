@@ -286,7 +286,7 @@ public class clothing : MonoBehaviour
             hat = true;
 
             // choose hair type   hair_a , hair_b  , hair_e
-            int hair = UnityEngine.Random.Range(0, 3);
+            int hair = UnityEngine.Random.Range(0, 2);
 
             if (hair == 0)
             {
@@ -554,19 +554,19 @@ public class clothing : MonoBehaviour
 
 
         // determining complet suits or normal cloth
-        int suit_or_cloth = UnityEngine.Random.Range(0, 2);
-        if (suit_or_cloth == 0)
+        int suit_or_cloth = UnityEngine.Random.Range(0, 10);
+        if (suit_or_cloth < 2)
         {
             bool_suit = true;
         }
-        else if (suit_or_cloth == 1)
+        else if (suit_or_cloth >= 2)
         {
             bool_cloth = true;
         }
         // determing      suit/ normal cloth to wear
 
 
-        if (suit_or_cloth == 0)
+        if (suit_or_cloth < 2)
         {
             // suits
 
@@ -741,7 +741,7 @@ public class clothing : MonoBehaviour
 
 
         }
-        if (suit_or_cloth == 1)
+        if (suit_or_cloth >= 2)
         {
             // normal cloth
 

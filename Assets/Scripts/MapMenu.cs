@@ -19,14 +19,14 @@ public class MapMenu : MonoBehaviour
     }
     public void OnEasyButton()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void OnMediumButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void OnHardButton()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }
